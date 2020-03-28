@@ -1,0 +1,6 @@
+{
+    "emmet.includeLanguages": {"erb": "html"},
+    "files.associations": {
+        "*.erb": "erb"
+    }
+}

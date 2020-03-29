@@ -1,0 +1,27 @@
+<h2>Register</h2>
+<%= form_for :user do |f| %>
+    <!-- form_for @object, html: { multipart: true }, do |f| -->
+    <!-- form_for @object, html: { class: "classname" }, do |f| -->
+    <fieldset>
+        <legend>Enter Your Details</legend>
+        
+        <div class="form-row">
+            <label for="screen_name">Screen name:</label>
+            <%= f.text_field :screen_name %>
+        </div>
+
+        <div class="form-row">
+            <label for="email">Email</label>
+            <%= f.text_field :email %>
+        </div>
+
+        <div class="form-row">
+            <label for="password">Password</label>
+            <%= f.text_field :password %>
+        </div>
+
+        <div class="form-row">
+            <%= submit_tag "Register", :class => "submit" %>
+        </div>
+    </fieldset>
+<% end %>

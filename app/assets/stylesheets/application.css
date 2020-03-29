@@ -13,3 +13,88 @@
  *= require_tree .
  *= require_self
  */
+ body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: gray;
+    margin: 0;
+    text-align: center;
+}
+
+fieldset {
+    position: relative;
+    background: #ddd;
+    margin-top: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+legend {
+    position: absolute;
+    color: white;
+    background: maroon;
+    top: -1em;
+    left: 0.5em;
+    padding: .4em 1em;
+}
+
+label {
+    width: 10em;
+    float: left;
+    text-align: right;
+    margin-right: 0.2em;
+    display: block;
+}
+
+#whole_page {
+    width: 50em;
+    margin: auto;
+    padding: 0;
+    text-align: left;
+    border-width: 0 1px 1px 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+#header {
+    color: white;
+    background: maroon;
+    font-size: 24pt;
+    padding: 0.25em;
+    margin-bottom: 0;
+}
+
+#nav {
+    color: black;
+    font-size: 12pt;
+    font-weight: bold;
+    background: #ccc;
+    padding: 0.5em;
+}
+
+#nav a, #nav a:visited {
+    color: maroon;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    border-bottom: 2px dotted maroon;
+}
+
+#content {
+    height: 100%;
+    background: white;
+    padding: 1em;
+}
+
+#content h1 {
+    font-size: 18pt;
+}
+
+.form-row {
+    white-space: nowrap;
+    padding-bottom: .5em;
+}
+
+.submit {
+    margin-left: 15em;
+}

@@ -11,13 +11,16 @@
         <div id="header">RailSpace</div>
         <div id="nav">
             <%= link_to_unless_current "Home", :controller => "site", :action => "index" %> | 
-            <%= link_to_unless_current "Register", :controller => "user", :action => "register" %> |
             <%= link_to_unless_current "About Us", :controller => "site", :action => "about" %> |
-            <%= link_to_unless_current "Help", :controller => "site", :action => "help" %>
+            <%= link_to_unless_current "Help", :controller => "site", :action => "help" %> |
+            <%= link_to_unless_current "Register", :controller => "user", :action => "register" %>
         </div>
         <div id="content">
             <%= yield %>
         </div>
+        <% if ENV["RAILS_ENV"] == "development" %>
+          <%= debug(params) %>
+        <% end %>
     </div>
 </body>
 </html>

@@ -90,6 +90,15 @@ label {
     font-size: 18pt;
 }
 
+.debug_dump {
+    text-align: left;
+    color: chartreuse;
+    border-top: 1px dashed white;
+    background: black;
+    margin: 0;
+    padding: 0.5em;
+}
+
 .form-row {
     white-space: nowrap;
     padding-bottom: .5em;

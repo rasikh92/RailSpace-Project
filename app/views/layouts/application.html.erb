@@ -10,12 +10,17 @@
     <div id="whole_page">
         <div id="header">RailSpace</div>
         <div id="nav">
-            <%= link_to_unless_current "Home", :controller => "site", :action => "index" %> | 
-            <%= link_to_unless_current "About Us", :controller => "site", :action => "about" %> |
-            <%= link_to_unless_current "Help", :controller => "site", :action => "help" %> |
-            <%= link_to_unless_current "Register", :controller => "user", :action => "register" %>
+            <% #My own function of link_to_unless_current as defined in application_helper.rb %>
+            <%= nav_link "Home", "site" %> | 
+            <%= nav_link "About Us", "site", "about" %> |
+            <%= nav_link "Help", "site", "help" %> |
+            <%= nav_link "Register", "user", "register" %>
         </div>
+        <% ActionController::Parameters.permit_all_parameters = true %>
         <div id="content">
+            <% if flash[:notice] -%>
+                <div id="notice"><%= flash[:notice].try(:html_safe) %></div>
+            <% end -%>
             <%= yield %>
         </div>
         <% if ENV["RAILS_ENV"] == "development" %>

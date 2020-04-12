@@ -16,7 +16,6 @@
             <%= nav_link "Help", "site", "help" %> |
             <%= nav_link "Register", "user", "register" %>
         </div>
-        <% ActionController::Parameters.permit_all_parameters = true %>
         <div id="content">
             <% if flash[:notice] -%>
                 <div id="notice"><%= flash[:notice].try(:html_safe) %></div>

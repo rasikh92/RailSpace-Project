@@ -1,4 +1,7 @@
 class UserController < ApplicationController
+  
+  ActionController::Parameters.permit_all_parameters = true
+        
   def index
     @title = "RailSpace User Hub"
   end

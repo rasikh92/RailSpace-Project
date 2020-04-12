@@ -4,6 +4,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'dynamic_form'
+# A testing package for rails
+gem 'rails-controller-testing'
+# A dom testing package for rails
+gem 'rails-dom-testing'
 # A plugin for displaying error messages
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use mysql2 as Active Record
